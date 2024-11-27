@@ -5,6 +5,9 @@
 - Recommendations
 ## Project Overview
 This documentation outlines the steps taken to clean and transform the HR dataset. The focus was on standardizing values in the EducationField column, correctly transforming the HireDate column to the appropriate date format, and creating a calculated column, Actual years at company, with decimal precision. Each transformation step is described in detail below.
+### Tools and Techniques
+- Power BI : for visualizing
+- Power Query :for cleaning
 ### Cleaning
 ### 1. Standardizing the "Marketing" Values in the EducationField Column
 •	Column: EducationField
@@ -105,3 +108,5 @@ o	Compare satisfaction levels to identify areas needing attention.
 ![Screenshot 2024-10-18 194900](https://github.com/user-attachments/assets/fe3fc9c4-63fd-4e0f-ae0c-fad45928aac8)
 
 ##  Data Sourses
+DataSet after cleaning uplaeded 
+## Recommendations
