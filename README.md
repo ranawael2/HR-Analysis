@@ -4,11 +4,14 @@
 - Data Sourses
 - Recommendations
 ## Project Overview
-This documentation outlines the steps taken to clean and transform the HR dataset. The focus was on standardizing values in the EducationField column, correctly transforming the HireDate column to the appropriate date format, and creating a calculated column, Actual years at company, with decimal precision. Each transformation step is described in detail below.
+o	Company information about employees describes each employee, his education level, name, gender, salary, performance, years at company, satisfaction, attrition……
+o	five tables (EducationLevel, Employee, PerformanceRating, RatingLevel, SatisfiedLevel)
+Tables Description:
 ### Tools and Techniques
 - Power BI : for visualizing
 - Power Query :for cleaning
-### Cleaning
+### Cleaning OverView
+This documentation outlines the steps taken to clean and transform the HR dataset. The focus was on standardizing values in the EducationField column, correctly transforming the HireDate column to the appropriate date format, and creating a calculated column, Actual years at company, with decimal precision. Each transformation step is described in detail below.
 ### 1. Standardizing the "Marketing" Values in the EducationField Column
 •	Column: EducationField
 •	Issue Identified: The EducationField column contained two similar but inconsistent values for "Marketing"—one with an extra trailing space.
@@ -110,3 +113,18 @@ o	Compare satisfaction levels to identify areas needing attention.
 ##  Data Sourses
 DataSet after cleaning uplaeded 
 ## Recommendations
+-Increase Minimum Salaries and Stock Benefits: Raising base salaries and offering more stock options can help reduce employee turnover, especially for lower-paid employees. This may also improve employee performance.
+
+-Focus on High-Turnover Roles: Jobs like data scientist, sales executive, and software engineer need special attention. The company should figure out why employees in these roles are leaving and offer better compensation or growth opportunities.
+
+-Link Performance to Pay: Employee performance ratings should influence salary increases and promotions. Rewarding high performers will motivate employees to work harder.
+
+-Reward Long-Term Employees: Giving salary increases based on how long employees stay at the company can encourage them to remain for longer periods.
+
+-Address Attrition in Sales and HR: The sales and HR departments need attention due to high turnover. Finding out why employees are leaving and making improvements will help reduce attrition in these departments. Also, compensating the candidates who have left is important.
+
+
+
+
+
+
