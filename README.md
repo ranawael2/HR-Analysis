@@ -4,8 +4,8 @@
 - Data Sourses
 - Recommendations
 ## Project Overview
-o	Company information about employees describes each employee, his education level, name, gender, salary, performance, years at company, satisfaction, attrition……
-o	five tables (EducationLevel, Employee, PerformanceRating, RatingLevel, SatisfiedLevel)
+- Company information about employees describes each employee, his education level, name, gender, salary, performance, years at company, satisfaction, attrition……
+-	five tables (EducationLevel, Employee, PerformanceRating, RatingLevel, SatisfiedLevel)
 Tables Description:
 ### Tools and Techniques
 - Power BI : for visualizing
