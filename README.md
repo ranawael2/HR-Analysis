@@ -28,14 +28,14 @@ o	Applied a transformation to replace "Marketing " with "Marketing".
 ```
 
 ### 2. Correcting the "HireDate" Format
-•	Column: HireDate
-•	Issue Identified: The HireDate column had dates in the MM/DD/YYYY format, which could not be directly converted to the DD/MM/YYYY format needed for the analysis.
-•	Cleaning Action:
+-	Column: HireDate
+	Issue Identified: The HireDate column had dates in the MM/DD/YYYY format, which could not be directly converted to the DD/MM/YYYY format needed for the analysis.
+-	Cleaning Action:
 o	The HireDate column was split into three separate columns for the month, day, and year using the “/” delimiter.
 o	After splitting, the order of the columns was rearranged to DD/MM/YYYY format.
 o	Finally, the three columns were merged back together into a single date column in the correct format.
 ![image](https://github.com/user-attachments/assets/3d25a3c6-f50e-4b9c-bb63-55ea08a52cb5)
-•	Steps Taken:
+-	Steps Taken:
 1.	Split the HireDate column by the / delimiter to create three separate columns: Month, Day, and Year.
 2.	Rearranged the columns from Month-Day-Year to Day-Month-Year.
 3.	Merged the columns back into one column in the DD/MM/YYYY format.
@@ -55,10 +55,11 @@ Table.TransformColumnTypes(#"Previous Step", {{"HireDate", type date}})
 •	Calculated Column: Actual years at company
 •	Objective: To calculate the exact tenure (in decimal years) for employees with no attrition, while retaining the value from the YearsAtCompany column for employees with attrition.
 ![image](https://github.com/user-attachments/assets/ea9e3e69-eca6-4ebe-ba5f-7827cc364498)
- •	Steps Taken:
+- Steps Taken:
 1.	Created a new calculated column, "Actual years at company", based on the following logic:
-	If Attrition = "No", calculate the number of years from HireDate to the current date (31/12/2022).
-	If Attrition = "Yes", use the existing value from the YearsAtCompany column.
+```	If Attrition = "No", calculate the number of years from HireDate to the current date (31/12/2022).
+If Attrition = "Yes", use the existing value from the YearsAtCompany column.
+```
 2.	Formula used for this calculation:
 Table.AddColumn(#"Change Type", "Actual years at company", each if [Attrition] = "No" then Duration.Days(#date(2022, 12, 31) - [HireDate]) / 365 else [YearsAtCompany])
 ### 4. Rounding "Actual years at company" and Changing Data Type
@@ -68,7 +69,8 @@ Table.AddColumn(#"Change Type", "Actual years at company", each if [Attrition] =
 2.	Changed the column type to Decimal Number for accurate numerical representation and calculations.
 
 Code:
-```Table.TransformColumns(#"Previous Step", {{"Actual years at company", each Number.Round(_, 2), type number}})
+```
+Table.TransformColumns(#"Previous Step", {{"Actual years at company", each Number.Round(_, 2), type number}})
 ```
 ![image](https://github.com/user-attachments/assets/b9159829-5ac9-4a23-8854-fdbde79bde0c)
 ### Summary of Transformations:
